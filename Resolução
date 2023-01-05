@@ -1,0 +1,19 @@
+def main():
+    string = input()
+    compressao = ''
+    n = len(string)
+    i = 0 
+    j = 0
+    
+    while i < n:
+        freq = 0
+        while j < n and string[i] == string[j]:
+            freq += 1 
+            j += 1
+        s_freq = str(freq)
+        compressao += string[i] + s_freq
+        i = j 
+        
+    print(compressao) 
+    
+main()  
